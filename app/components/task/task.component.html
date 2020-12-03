@@ -1,0 +1,12 @@
+<div class="card mb-2">
+    <div class="card-header d-flex justify-content-between align-center">
+        {{task.title}}
+        <div>
+            <button class="btn btn-primary mr-2" (click)="task.hide = !task.hide">Tarea</button>
+            <button class="btn btn-danger" (click)="deleteTask(task)">Eliminar</button>
+        </div>
+    </div>
+    <div class="card-body" *ngIf="task.hide===true">
+        {{task.description}}
+    </div>
+</div>
